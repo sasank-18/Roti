@@ -1,9 +1,11 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import signInSelection from './toggleSignInSelection.js'
+import User from "./currentUserSlice.js";
 const appStore= configureStore({
     reducer: {
-        signInSelection : signInSelection
+        signInSelection : signInSelection,
+        currentUser : User 
     }
 })
 
