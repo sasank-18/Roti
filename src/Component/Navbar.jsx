@@ -23,9 +23,9 @@ const Navbar = () => {
    }
   };
   return (
-    <div className=" flex bg-slate-300 relative py-5   w-full item-center px-8 lg:px-12   justify-between  ">
+    <div className=" flex bg-white shadow-md text-lg font-medium relative py-5   w-full item-center px-8 lg:px-12   justify-between  ">
       <div className="flex items-center">Logo</div>
-      <div className="flex items-center  gap-5">
+      <div className="flex items-center   gap-12">
         {navElements.map((element) => {
           if (element.label === "Sign-In") {
             return (
@@ -33,13 +33,13 @@ const Navbar = () => {
                 {currentUser ? (
                   <div
                     onClick={handleLogout}
-                    className="px-3 py-1 bg-green-500 rounded-full"
+                    className="px-3 py-1 border border-slate-400 hover:bg-red-400 active:bg-red-500  cursor-pointer rounded-full"
                   >
                     Logout
                   </div>
                 ) : (
                   <div
-                    className="px-3 py-1 bg-green-500 rounded-full"
+                    className="px-3 py-1 border border-slate-400 hover:bg-green-400 active:bg-green-500  cursor-pointer rounded-full"
                     onClick={() => {
                       dispatch(toggleSignIn_Selection());
                     }}

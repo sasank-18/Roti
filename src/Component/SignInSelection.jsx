@@ -21,16 +21,18 @@ const SignInSelection = () => {
 
   return (
     toggleSignIn && (
-      <div className="w-[50vw] rounded-2xl h-[70vh] bg-red-400 absolute left-[25%]  top-[15vh]  ">
-        <div className="w-full flex-col font-bold font  h-full flex  justify-center gap-14 md:flex-row  items-center ">
+      <div className="w-[50vw] rounded-2xl h-[60vh] bg-green-400 absolute left-[25%]  top-[15vh]  ">
+              <h1>Let's Get Started!!</h1>
+
+        <div className="w-full flex-col font-bold text-xl  h-full flex  justify-center gap-8 md:flex-row  items-center ">
           <Link to="/sign-in-user">
-            <button className="px-3 rounded-lg py-3 bg-slate-300">
-              Sign-In as User
+            <button className="px-8 rounded-full shadow-lg bg-white py-4 ">
+              Login as User
             </button>
           </Link>
           <Link to="/sign-in-business">
-            <button className="px-2 rounded-lg py-3 bg-slate-300">
-              Sign-In as business
+            <button className="px-8 rounded-full border shadow-lg border-black py-[0.95rem]">
+            Login as Business
             </button>
           </Link>
         </div>
