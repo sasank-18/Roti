@@ -8,6 +8,7 @@ const SignInSelection = () => {
   const toggleSignIn = useSelector(
     (state) => state.signInSelection.SignInSelection
   );
+  const currentUser = useSelector((state)=> state.currentUser.User);
 
   useEffect(() => {
     if(toggleSignIn)
@@ -20,7 +21,7 @@ const SignInSelection = () => {
 
 
   return (
-    toggleSignIn && (
+    toggleSignIn && !currentUser &&(
       <div className="w-[50vw] rounded-2xl h-[60vh] bg-green-400 absolute left-[25%]  top-[15vh]  ">
               <h1>Let's Get Started!!</h1>
 
