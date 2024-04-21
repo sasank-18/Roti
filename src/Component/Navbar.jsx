@@ -6,8 +6,10 @@ import SignInSelection from "./SignInSelection";
 import logoutUser from "../utils/firebase/logoutUser";
 import useOnAuthStateChanged from "../utils/firebase/useOnAuthStateChanged";
 import { UpdateUser } from "../ReduxStore/currentUserSlice";
+import signUpPostApi from "../utils/DatabaseApi/signUpPostApi";
 
 const Navbar = () => {
+  signUpPostApi()
   const currentUser = useSelector((state)=> state.currentUser.User);
   console.log(currentUser)
   const navigate = useNavigate();

@@ -5,6 +5,7 @@ import signInAuth from "../utils/firebase/signInAuth";
 import updateUserProfile from "../utils/firebase/updateUserProfile";
 import { useNavigate } from "react-router-dom";
 import useOnAuthStateChanged from "../utils/firebase/useOnAuthStateChanged";
+import signUpPostApi from "../utils/DatabaseApi/signUpPostApi";
 
 
 const SignIn_User = () => {
@@ -37,6 +38,7 @@ const SignIn_User = () => {
         navigate("/");
         // updateuserProfile
         updateUserProfile(Name.current.value, Phone.current.value);
+        signUpPostApi(Name.current.value,Phone.current.value )
       } else setAuthError(value);
     } else {
       //sign In
